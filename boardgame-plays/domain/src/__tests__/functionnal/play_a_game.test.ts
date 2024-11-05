@@ -1,17 +1,22 @@
 import { describe, it, expect } from "vitest";
+import { Play } from "../../play";
+import { PlayAGame } from "../../primary_ports/play_a_game";
 
 describe("Play a game functionnal tests", () => {
   it("should play a game with the correct number of players", () => {
     // Given
-    const play = {
-      boardgameName: "Brass Birmingham",
-      players: ["John", "Jane"],
-    };
+    const boardgameName = "Brass Birmingham";
+    const players = ["Michel", "John"];
 
     // When
-    const createPlayResult = null;
+    const playAGame: PlayAGame = {} as unknown as PlayAGame;
+    const play: Play = playAGame.forBoardgame(boardgameName, players);
 
     // Then
-    expect(createPlayResult).toBe('success');
+    expect(play).toBe({
+      boardgameName: "Brass Birmingham",
+      bggId: "224517",
+      players: ["Michel", "John"],
+    });
   });
 });
