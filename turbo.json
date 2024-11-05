@@ -24,6 +24,10 @@
       "dependsOn": [],
       "cache": false
     },
+    "test:functionnal": {
+      "dependsOn": [],
+      "cache": false
+    },
     "types:check": {
       "cache": false
     }

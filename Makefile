@@ -65,3 +65,7 @@ only-tests: ## Run Tests only
 tests: codeclean ## Run Codeclean, Tests and Builds
 	@$(PACKAGE_MANAGER) run test
 	@$(PACKAGE_MANAGER) run build
+
+.PHONY: test-functionnal
+test-functionnal: ## Run Functionnal Tests
+	@$(PACKAGE_MANAGER) run test:functionnal
