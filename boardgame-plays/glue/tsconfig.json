@@ -1,6 +1,7 @@
 {
   "extends": "../../tools-config/typescript/tsconfig.json",
-  "include": ["**/*.ts"],
+  "include": ["src/**/*.ts"],
+  "exclude": ["build"],
   "compilerOptions": {
     "strict": true,
     "noImplicitAny": true,
