@@ -1,15 +1,22 @@
-import { PlayAGame } from "./primary_ports/play_a_game";
+import { BoardgameInventory } from "./secondary_ports/boargame-inventory";
+import { PlayAGame } from "./use_cases/play_a_game";
 
-export function buildPlayAGame(): PlayAGame {
-  function getBoardgameByName(name: string) {
-    return null;
-  }
+type Dependencies = {
+  boardgameInventory: BoardgameInventory;
+};
 
+export function buildPlayAGame({
+  boardgameInventory,
+}: Dependencies): PlayAGame {
   function forBoardgame(
     boardgameName: string,
     players: string[]
   ): ReturnType<PlayAGame["forBoardgame"]> {
-    const boardames = getBoardgameByName(boardgameName);
+    const boardgame = boardgameInventory.getBoardgameByName(boardgameName);
+
+    if (!boardgame) {
+      throw new Error("Boardgame not found");
+    }
 
     throw new Error("Not implemented");
   }

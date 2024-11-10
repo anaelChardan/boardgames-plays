@@ -23,7 +23,7 @@ Nous pouvons utiliser l'API de boardgamegeek pour retrouver ces informations.
 
 ## Steps
 
-### Domain
+1. Domain
 
 On a la notion de:
 
@@ -49,3 +49,24 @@ export type Play = {
 };
 ```
 
+2. On veut pouvoir enregistrer une partie en intéragissant avec notre domain
+
+a) Définissons le port primaire (ou use case) ensemble!
+
+```ts
+type PlayAGame = {
+  forBoardgame: (boardgameName: string, players: string[]) => Play;
+};
+```
+
+Notes: on ne doit dépendre uniquement que d'objets du domain.
+
+b) Passons à l'implémentation
+
+On doit pouvoir:
+
+- retrouver le jeu (attention, comment-est ce que l'on interagit avec bgg) -> comme c'est de l'infrastructure on doit faire de l'injection de dépendance. ;) 
+- vérifier le nombre de joueur
+- enregistrer la partie
+
+Revérifions notre test functionnel
