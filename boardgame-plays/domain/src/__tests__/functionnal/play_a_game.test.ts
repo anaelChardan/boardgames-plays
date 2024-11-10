@@ -8,7 +8,8 @@ describe("Play a game functionnal tests", () => {
     const boardgameName = "Brass Birmingham";
     const players = ["Michel", "John"];
 
-    // When
+    // When 
+    // le but est d'appeler le domain
     const playAGame: PlayAGame = {} as unknown as PlayAGame;
     const play: Play = playAGame.forBoardgame(boardgameName, players);
 

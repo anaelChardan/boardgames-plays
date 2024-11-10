@@ -5,5 +5,5 @@ export type Play = {
 };
 
 export type Plays = {
-  play: [];
+  plays: Play[];
 };
