@@ -70,3 +70,5 @@ On doit pouvoir:
 - enregistrer la partie
 
 Revérifions notre test functionnel
+
+- nous avons besoin d'un stub pour notre port secondaire

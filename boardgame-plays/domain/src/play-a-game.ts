@@ -18,7 +18,18 @@ export function buildPlayAGame({
       throw new Error("Boardgame not found");
     }
 
-    throw new Error("Not implemented");
+    if (
+      players.length < boardgame.minNumberOfPlayers ||
+      players.length > boardgame.maxNumberOfPlayers
+    ) {
+      throw new Error("Invalid number of players");
+    }
+
+    return {
+      boardgameName,
+      bggId: boardgame.bggId,
+      players,
+    };
   }
 
   return {
