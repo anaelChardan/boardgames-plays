@@ -79,3 +79,4 @@ Fast forward to branch 2_controller
 
 1. On écrit d'abord le test (/play)
 2. On écrit le controller (zod etc...)
+3. L'infrastucture dépend du contrat
