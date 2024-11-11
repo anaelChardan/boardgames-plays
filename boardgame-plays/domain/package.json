@@ -7,7 +7,7 @@
     "build": "tsc -b",
     "lint:check": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "vitest run --dir src",
+    "test": "pnpm run test:functionnal",
     "test:functionnal": "vitest run --dir src/__tests__/functionnal"
   },
   "dependencies": {

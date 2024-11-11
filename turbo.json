@@ -24,6 +24,10 @@
       "dependsOn": [],
       "cache": false
     },
+    "test:api": {
+      "dependsOn": [],
+      "cache": false
+    },
     "test:functionnal": {
       "dependsOn": [],
       "cache": false

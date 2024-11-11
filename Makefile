@@ -61,6 +61,15 @@ watch: ## Watch
 only-tests: ## Run Tests only
 	@$(PACKAGE_MANAGER) run test
 
+.PHONY: tests-functionnal
+tests-functionnal: ## Run Functionnal Tests only
+	@$(PACKAGE_MANAGER) run test:functionnal
+
+
+.PHONY: tests-api
+tests-api: ## Run API Tests only
+	@$(PACKAGE_MANAGER) run test:api
+
 .PHONY: tests
 tests: codeclean ## Run Codeclean, Tests and Builds
 	@$(PACKAGE_MANAGER) run test
