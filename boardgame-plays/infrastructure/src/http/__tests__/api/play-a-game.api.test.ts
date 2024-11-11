@@ -1,10 +1,10 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import { buildHttpServer } from "../..";
-import { PlayAGame } from "@boardava/domain";
+import { boardgameInventoryStub, buildPlayAGame } from "@boardava/domain";
 
-const playAGameMock: PlayAGame = {
-  forBoardgame: vi.fn(),
-};
+const playAGameMock = buildPlayAGame({
+  boardgameInventory: boardgameInventoryStub,
+});
 
 describe("play a game", () => {
   it("should return a 400 if the payload is invalid", async () => {
@@ -37,7 +37,7 @@ describe("play a game", () => {
     expect(response.statusCode).toBe(201);
     expect(response.json()).toEqual({
       boardgameName: "Brass: Birmingham",
-      bggId: "123",
+      bggId: "224517",
       players: ["John", "Jane"],
     });
   });
