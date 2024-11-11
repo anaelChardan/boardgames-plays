@@ -39,11 +39,14 @@ export function buildHttpServer(dependencies: Dependencies) {
       },
     },
     (request, response) => {
-      response.status(201).send({
-        boardgameName: request.body.boardgameName,
-        bggId: "123",
-        players: request.body.players,
-      });
+      // ici on peut faire des validations supplémentaires
+      // on peut aussi adapter la réponse dédié au HTTP
+      const play = playAGame.forBoardgame(
+        request.body.boardgameName,
+        request.body.players
+      );
+
+      response.status(201).send(play);
     }
   );
 
