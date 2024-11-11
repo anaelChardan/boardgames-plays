@@ -80,3 +80,8 @@ Fast forward to branch 2_controller
 1. On écrit d'abord le test (/play)
 2. On écrit le controller (zod etc...)
 3. L'infrastucture dépend du contrat
+
+Problème:
+- Pour créer mon controller, j'ai besoin d'un "PlayAGame" qui lui même a besoin d'un "BoardgameInventory"
+- Pour l'instant je ne veux pas encore implémenter mon api boardgame geek
+- Utilisons notre stub (extrayons le depuis notre premier test)
