@@ -1,5 +1,5 @@
 import { BoardgameInventory } from "./secondary_ports/boargame-inventory";
-import { PlayAGame } from "./use_cases/play_a_game";
+import { PlayAGame } from "./use_cases/play-a-game";
 
 type Dependencies = {
   boardgameInventory: BoardgameInventory;

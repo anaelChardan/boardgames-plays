@@ -1,21 +1,25 @@
 {
-  "name": "@boardava/domain",
+  "name": "@boardava/infrastructure",
   "main": "./build/src/index.js",
   "types": "./build/src/index.d.ts",
   "scripts": {
+    "clear": "rm -rf ./build ./tsconfig.tsbuildinfo",
     "types:check": "tsc --noEmit",
     "build": "tsc -b",
     "lint:check": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "vitest run --dir src",
-    "test:functionnal": "vitest run --dir src/__tests__/functionnal"
+    "test": "vitest run --dir src"
   },
   "dependencies": {
+    "@boardava/domain": "workspace:*",
+    "fastify": "^5.1.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@boardava/eslint-config": "workspace:*",
     "@types/node": "^22.8.6",
+    "ts-node": "10.9.1",
+    "ts-node-dev": "2.0.0",
     "typescript": "^5.6.3",
     "vitest": "^2.1.4"
   },

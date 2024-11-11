@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { Play } from "../../play";
-import { PlayAGame } from "../../use_cases/play_a_game";
+import { PlayAGame } from "../../use_cases/play-a-game";
 import { buildPlayAGame } from "../../play-a-game";
 
 describe("Play a game functionnal tests", () => {

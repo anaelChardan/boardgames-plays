@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@boardava/domain": "workspace:*",
+    "@boardava/infrastructure": "workspace:*",
     "zod": "^3.23.8"
   },
   "devDependencies": {
