@@ -85,3 +85,10 @@ Problème:
 - Pour créer mon controller, j'ai besoin d'un "PlayAGame" qui lui même a besoin d'un "BoardgameInventory"
 - Pour l'instant je ne veux pas encore implémenter mon api boardgame geek
 - Utilisons notre stub (extrayons le depuis notre premier test)
+
+
+Question ?
+
+Pourquoi le stub serait en production ? 
+
+Les équipes front peuvent travailler sur notre stub
