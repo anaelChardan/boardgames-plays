@@ -8,11 +8,12 @@ type Dependencies = {
 export function buildPlayAGame({
   boardgameInventory,
 }: Dependencies): PlayAGame {
-  function forBoardgame(
+  async function forBoardgame(
     boardgameName: string,
-    players: string[]
+    players: string[],
   ): ReturnType<PlayAGame["forBoardgame"]> {
-    const boardgame = boardgameInventory.getBoardgameByName(boardgameName);
+    const boardgame =
+      await boardgameInventory.getBoardgameByName(boardgameName);
 
     if (!boardgame) {
       throw new Error("Boardgame not found");

@@ -4,7 +4,6 @@
     "build": "FORCE_COLOR=1 turbo run build",
     "dev": "FORCE_COLOR=1 turbo run dev",
     "watch": "FORCE_COLOR=1 turbo run watch",
-    "test": "FORCE_COLOR=1 turbo run test",
     "test:functionnal": "FORCE_COLOR=1 turbo run test:functionnal",
     "test:integration": "FORCE_COLOR=1 turbo run test:integration",
     "test:api": "FORCE_COLOR=1 turbo run test:api",

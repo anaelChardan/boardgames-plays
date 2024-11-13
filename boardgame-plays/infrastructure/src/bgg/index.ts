@@ -1,9 +1,11 @@
-import { Boardgame } from "@boardava/domain";
+import { Boardgame, BoardgameInventory } from "@boardava/domain";
 import bgg from "bgg-sdk";
 import { BggThing } from "./types";
 
-export function buildBggApi() {
-  async function getBoardgameByName(boardgameName: string) {
+export function buildBggBoardgameInventory(): BoardgameInventory {
+  async function getBoardgameByName(
+    boardgameName: string,
+  ): Promise<Boardgame | null> {
     const searchResult = await bgg.search({
       query: boardgameName,
       type: ["boardgame"],

@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import bgg from "bgg-sdk";
-import { buildBggApi } from "../../../bgg";
+import { buildBggBoardgameInventory } from "../../../bgg";
 import { mockBrassSearchResult, mockBrassThing } from "./mocks";
 
 vi.mock("bgg-sdk");
@@ -12,7 +12,7 @@ describe("play a game", () => {
     bggMock.search.mockResolvedValue(mockBrassSearchResult);
     bggMock.thing.mockResolvedValue(mockBrassThing);
 
-    const bggApi = buildBggApi();
+    const bggApi = buildBggBoardgameInventory();
 
     const response = await bggApi.getBoardgameByName("Brass: Birmingham");
 

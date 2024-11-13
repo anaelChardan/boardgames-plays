@@ -65,7 +65,7 @@ b) Passons à l'implémentation
 
 On doit pouvoir:
 
-- retrouver le jeu (attention, comment-est ce que l'on interagit avec bgg) -> comme c'est de l'infrastructure on doit faire de l'injection de dépendance. ;) 
+- retrouver le jeu (attention, comment-est ce que l'on interagit avec bgg) -> comme c'est de l'infrastructure on doit faire de l'injection de dépendance. ;)
 - vérifier le nombre de joueur
 - enregistrer la partie
 
@@ -82,17 +82,16 @@ Fast forward to branch 2_controller
 3. L'infrastucture dépend du contrat
 
 Problème:
+
 - Pour créer mon controller, j'ai besoin d'un "PlayAGame" qui lui même a besoin d'un "BoardgameInventory"
 - Pour l'instant je ne veux pas encore implémenter mon api boardgame geek
 - Utilisons notre stub (extrayons le depuis notre premier test)
 
-
 Question ?
 
-Pourquoi le stub serait en production ? 
+Pourquoi le stub serait en production ?
 
 Les équipes front peuvent travailler sur notre stub
-
 
 ### BGG CLient
 

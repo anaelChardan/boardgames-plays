@@ -38,16 +38,16 @@ export function buildHttpServer(dependencies: Dependencies) {
         },
       },
     },
-    (request, response) => {
+    async (request, response) => {
       // ici on peut faire des validations supplémentaires
       // on peut aussi adapter la réponse dédié au HTTP
-      const play = playAGame.forBoardgame(
+      const play = await playAGame.forBoardgame(
         request.body.boardgameName,
-        request.body.players
+        request.body.players,
       );
 
       response.status(201).send(play);
-    }
+    },
   );
 
   return fastify;

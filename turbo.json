@@ -20,10 +20,6 @@
       "cache": false,
       "persistent": true
     },
-    "test": {
-      "dependsOn": [],
-      "cache": false
-    },
     "test:api": {
       "dependsOn": [],
       "cache": false

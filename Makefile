@@ -66,14 +66,16 @@ tests-functionnal: ## Run Functionnal Tests only
 	@$(PACKAGE_MANAGER) run test:functionnal
 
 
+.PHONY: tests
+tests: codeclean ## Run Codeclean, Tests and Builds
+	@$(PACKAGE_MANAGER) run test:functionnal
+	@$(PACKAGE_MANAGER) run test:integration
+	@$(PACKAGE_MANAGER) run test:api
+	@$(PACKAGE_MANAGER) run build
+
 .PHONY: tests-api
 tests-api: ## Run API Tests only
 	@$(PACKAGE_MANAGER) run test:api
-
-.PHONY: tests
-tests: codeclean ## Run Codeclean, Tests and Builds
-	@$(PACKAGE_MANAGER) run test
-	@$(PACKAGE_MANAGER) run build
 
 .PHONY: test-functionnal
 test-functionnal: ## Run Functionnal Tests

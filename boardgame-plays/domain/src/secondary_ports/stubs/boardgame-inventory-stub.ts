@@ -1,7 +1,7 @@
 import { BoardgameInventory } from "../boargame-inventory";
 
 export const boardgameInventoryStub: BoardgameInventory = {
-  getBoardgameByName: (name: string) => {
+  getBoardgameByName: async (name: string) => {
     return {
       name,
       bggId: "224517",
