@@ -92,3 +92,12 @@ Question ?
 Pourquoi le stub serait en production ? 
 
 Les équipes front peuvent travailler sur notre stub
+
+
+### BGG CLient
+
+On peut utiliser le SDK que l'on veut: bgg-sdk
+
+l'objectif est de parler les objets du domain (Anti-corruption-layer) donc notre adapter doit renvoyer des objets du domain
+
+On écrit d'abord un test pour BGG pour créer notre adapter et on mock ensuite (on ne veut pas dépendre du réseau dans la CI)

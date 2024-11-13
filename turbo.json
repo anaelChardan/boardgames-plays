@@ -28,6 +28,10 @@
       "dependsOn": [],
       "cache": false
     },
+    "test:integration": {
+      "dependsOn": [],
+      "cache": false
+    },
     "test:functionnal": {
       "dependsOn": [],
       "cache": false

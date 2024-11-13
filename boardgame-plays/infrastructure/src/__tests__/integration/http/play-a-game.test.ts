@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildHttpServer } from "../..";
+import { buildHttpServer } from "../../../http";
 import { boardgameInventoryStub, buildPlayAGame } from "@boardava/domain";
 
 const playAGameMock = buildPlayAGame({

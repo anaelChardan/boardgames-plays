@@ -78,3 +78,7 @@ tests: codeclean ## Run Codeclean, Tests and Builds
 .PHONY: test-functionnal
 test-functionnal: ## Run Functionnal Tests
 	@$(PACKAGE_MANAGER) run test:functionnal
+
+.PHONY: test-integration
+test-integration: ## Run Integration Tests
+	@$(PACKAGE_MANAGER) run test:integration
